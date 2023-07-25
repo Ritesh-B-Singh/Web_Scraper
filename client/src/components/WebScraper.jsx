@@ -16,7 +16,9 @@ const WebScraper = () => {
   const handleSearch = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch(`http://localhost:5000/api/search?query=${query}`)
+      const res = await fetch(
+        `https://web-scraper-backend-eqt1.onrender.com/api/search?query=${query}`
+      )
       const data = await res.json()
       console.log(data.top5URL)
       setResults(data.top5URL)
@@ -65,7 +67,13 @@ const WebScraper = () => {
                 <Typography variant="body1" sx={{ wordWrap: 'break-word' }}>
                   Website: {i.url}
                 </Typography>
-                <Box sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row' }} >
+                <Box
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    flexDirection: 'row'
+                  }}
+                >
                   <Typography>View HTML: </Typography>
                   <HtmlModal text={i.text} url={i.url} />
                 </Box>
