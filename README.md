@@ -20,13 +20,13 @@ cd web_scraper
 
 ### 3. Install the dependencies for both the frontend and backend:
 
-## Install frontend dependencies:
+#### Install frontend dependencies:
 ```bash
 cd client
 npm install
 ```
 
-## Install backend dependencies:
+#### Install backend dependencies:
 ```bash
 cd server
 npm install
